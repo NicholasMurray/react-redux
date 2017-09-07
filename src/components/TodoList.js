@@ -1,8 +1,8 @@
 import React from 'react'
 
-const TodoItem = ({id, isCompleted, description}) => (
+const TodoItem = ({id, isComplete, name}) => (
     <li>
-        <input type="checkbox" defaultChecked={isCompleted} /> {description}
+        <input type="checkbox" defaultChecked={isComplete} /> {name}
     </li>
 )
 
