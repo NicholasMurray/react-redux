@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "json-server": "^0.12.0",
+    "node-sass-chokidar": "^0.0.3",
     "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
@@ -14,6 +16,8 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "json-server --static build db.json",
     "dev": "react-scripts start",
     "build": "react-scripts build",

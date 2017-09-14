@@ -13,16 +13,18 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React with Redux</h2>
+          <h2>React Redux Todos</h2>
         </div>
         <Router>
           <div className="Todo-App">
             <Message />
             <TodoForm />
             <Route path='/:filter?' render={({match}) => (
-              <TodoList filter={match.params.filter} />
+              <div>
+                <TodoList filter={match.params.filter} />
+                <Footer filter={match.params.filter} />
+              </div>
             )} />
-            <Footer />
           </div>
         </Router>
       </div>
