@@ -36,6 +36,10 @@ $lochinvar: #248888;
   width: 30rem;
 }
 
+.Todo-List {
+  height: 25rem;
+}
+
 input {
   border: 2px solid #cccccc;
   background: #ffffff;
@@ -123,7 +127,6 @@ a.selected {
 
 
 /* Base for label styling */
-
 [type="checkbox"] + label {
   padding-top: 0.1rem;
   font-size: 1.6rem;

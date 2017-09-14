@@ -28,6 +28,9 @@
   text-align: left;
   width: 30rem; }
 
+.Todo-List {
+  height: 25rem; }
+
 input {
   border: 2px solid #cccccc;
   background: #ffffff;
