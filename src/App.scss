@@ -1,32 +1,40 @@
-@charset "UTF-8";
+$punch: #DB3A34;
+$elm: #177E89;
+$cape-cod: #393E41;
+$lochinvar: #248888;
+
 .App {
-  text-align: center; }
+  text-align: center;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+  height: 80px;
+}
 
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white; }
+  color: white;
+}
 
 .App-intro {
-  font-size: large; }
+  font-size: large;
+}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 .Todo-App {
   font-size: 1.2rem;
-  padding-top: 35px;
+  padding-top:35px;
   display: inline-block;
   text-align: left;
-  width: 30rem; }
+  width: 30rem;
+}
 
 input {
   border: 2px solid #cccccc;
@@ -35,40 +43,48 @@ input {
   font-size: 1.6rem;
   height: 2rem;
   line-height: 2rem;
-  width: 100%; }
+  width: 100%
+}
 
 ul {
-  padding: 0px; }
+  padding: 0px;
+}
 
 li {
-  color: #393E41;
+  color: $cape-cod;
   list-style-type: none;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-  margin-left: -2.22rem; }
+  margin-left: -2.22rem;
+}
 
 li span.delete-item {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 span.delete-item button {
   background: none;
   border: none;
   font-size: 1em;
-  font-weight: bold;
+  font-weight:bold;
   text-decoration: none;
-  color: #DB3A34;
-  margin-right: 0.4rem; }
+  color: $punch;
+  margin-right: 0.4rem;
+}
 
 span.delete-item button:before {
   content: '\2718';
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+}
 
 li:hover span.delete-item {
-  visibility: visible; }
+  visibility: visible;
+}
 
 .footer {
-  display: flex;
-  justify-content: space-between; }
+  display: flex; 
+  justify-content: space-between; 
+}
 
 a {
   padding-left: 1rem;
@@ -79,99 +95,105 @@ a {
   font-size: 1.6rem;
   height: 2rem;
   line-height: 2rem;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:visited, a:active {
-  color: #393E41; }
+  color: $cape-cod;
+}
 
 a.selected {
   color: #ffffff;
-  background-color: #248888;
-  border: none; }
+  background-color: $lochinvar;
+  border: none;
+}
 
 .message {
-  background-color: #177E89;
-  color: white;
-  border: solid 1px #177E89;
+  background-color: $elm;
+  color:white;
+  border: solid 1px $elm;
   position: absolute;
   text-align: center;
-  width: 200px;
+  width:200px;
   left: 50%;
-  margin-left: -100px;
-  top: 200px; }
+  margin-left:-100px;
+  top: 200px;
+}
+
+
 
 /* Base for label styling */
+
 [type="checkbox"] + label {
   padding-top: 0.1rem;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+} 
 
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px; }
-
+    position: absolute;
+    left: -9999px;
+}
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
-  position: relative;
-  padding-left: 3rem;
-  cursor: pointer;
-  margin-bottom: 4px;
-  display: inline-block; }
-
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    margin-bottom: 4px;
+    display: inline-block;
+}
 /* checkbox aspect */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
-  content: '';
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #cccccc;
-  background: #ffffff;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
-
+    content: '';
+    position: absolute;
+    left: 0px; top: 0px;
+    width: 30px; height: 30px;
+    border: 2px solid #cccccc;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: '✔';
-  position: absolute;
-  top: 0px;
-  left: 5px;
-  font-size: 24px;
-  line-height: 1.4;
-  color: #09ad7e;
-  transition: all .2s; }
-
+    content: '✔';
+    position: absolute;
+    top: 0px; left: 5px;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #09ad7e;
+    transition: all .2s;
+}
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0); }
-
+    opacity: 0;
+    transform: scale(0);
+}
 [type="checkbox"]:checked + label:after {
-  opacity: 1;
-  transform: scale(1); }
-
+    opacity: 1;
+    transform: scale(1);
+}
 /* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
-  box-shadow: none;
-  border-color: #999999;
-  background-color: #dddddd; }
-
+    box-shadow: none;
+    border-color: #999999;
+    background-color: #dddddd;
+}
 [type="checkbox"]:disabled:checked + label:after {
-  color: #999999; }
-
+    color: #999999;
+}
 [type="checkbox"]:disabled + label {
-  color: #aaaaaa; }
-
+    color: #aaaaaa;
+}
 /* accessibility */
 [type="checkbox"]:checked:focus + label:before,
 [type="checkbox"]:not(:checked):focus + label:before {
-  border: 2px dotted #0000ff; }
-
+    border: 2px dotted #0000ff;
+}
 /* hover style just for information */
 label:hover:before {
-  border: 2px solid #4778d9 !important;
-  background: #ffffff; }
+    border: 2px solid #4778d9!important;
+    background: #ffffff;
+}

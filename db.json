@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "name": "configure server",
-      "isComplete": true
-    },
-    {
       "id": 2,
       "name": "start server",
       "isComplete": true
@@ -16,14 +11,19 @@
       "isComplete": false
     },
     {
-      "id": 4,
-      "name": "Add records",
-      "isComplete": true
-    },
-    {
       "name": "New Todo",
       "isComplete": false,
+      "id": 4
+    },
+    {
+      "name": "Newish Todo",
+      "isComplete": true,
       "id": 5
+    },
+    {
+      "name": "Another Todo",
+      "isComplete": false,
+      "id": 6
     }
   ]
 }

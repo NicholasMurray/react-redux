@@ -5,12 +5,12 @@ import {fetchTodos, toggleTodo, deleteTodo, getVisibleTodos} from '../reducers/t
 const TodoItem = ({id, name, isComplete, toggleTodo, deleteTodo}) => (
     <li>
         <span className='delete-item'>
-          <button onClick={() => deleteTodo(id)}>X</button>
+          <button onClick={() => deleteTodo(id)}></button>
         </span>
-        <input type="checkbox" 
+        <input type="checkbox" id={id}
             defaultChecked={isComplete} 
             onChange={() => toggleTodo(id)} />
-          {name}
+          <label htmlFor={id}>{name}</label>
     </li>
 )
 

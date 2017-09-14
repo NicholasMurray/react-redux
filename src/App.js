@@ -20,9 +20,11 @@ class App extends Component {
             <Message />
             <TodoForm />
             <Route path='/:filter?' render={({match}) => (
-              <TodoList filter={match.params.filter} />
+              <div>
+                <TodoList filter={match.params.filter} />
+                <Footer filter={match.params.filter} />
+              </div>
             )} />
-            <Footer />
           </div>
         </Router>
       </div>
