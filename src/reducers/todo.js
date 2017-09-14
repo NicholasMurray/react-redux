@@ -1,6 +1,5 @@
 import {getTodos, createTodo, updateTodo, destroyTodo} from '../lib/todoServices'
 import {showMessage} from './messages'
-//import {highlightFilter} from './footer'
 
 const initState = {
     todos: [],
@@ -67,9 +66,6 @@ export const getVisibleTodos = (todos, filter) => {
     default:
       return todos;
   }
-  // return (dispatch) => {
-  //   dispatch(showMessage("filter on test"))
-  // }
 }
 
 export default (state = initState, action) => {
