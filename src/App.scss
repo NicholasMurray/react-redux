@@ -2,6 +2,7 @@ $punch: #DB3A34;
 $elm: #177E89;
 $cape-cod: #393E41;
 $lochinvar: #248888;
+$biscay: #16335F;
 
 .App {
   text-align: center;
@@ -44,6 +45,7 @@ input {
   border: 2px solid #cccccc;
   background: #ffffff;
   border-radius: 4px;
+  color: $biscay;
   font-size: 1.6rem;
   height: 2rem;
   line-height: 2rem;
@@ -55,7 +57,7 @@ ul {
 }
 
 li {
-  color: $cape-cod;
+  color: $biscay;
   list-style-type: none;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -103,7 +105,7 @@ a {
 }
 
 a:visited, a:active {
-  color: $cape-cod;
+  color: $biscay;
 }
 
 a.selected {
@@ -124,6 +126,23 @@ a.selected {
   top: 200px;
 }
 
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
 
 
 /* Base for label styling */

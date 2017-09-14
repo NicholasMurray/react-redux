@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {connect} from 'react-redux'
 import {fetchTodos, toggleTodo, deleteTodo, getVisibleTodos} from '../reducers/todo'
 
@@ -22,6 +23,10 @@ class TodoList extends Component {
         return (
             <div className="Todo-List">
             <ul>
+            <ReactCSSTransitionGroup
+              transitionName="example"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
                 {
                     this.props.todos.map((todo) => (
                       <TodoItem 
@@ -32,6 +37,7 @@ class TodoList extends Component {
                       )
                     )
                 }
+              </ReactCSSTransitionGroup>
             </ul>
         </div>
       )
